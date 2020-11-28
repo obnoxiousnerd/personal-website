@@ -1,0 +1,88 @@
+.navButton {
+  z-index: 501;
+  display: inline-block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background: url("/svg/menu.svg") no-repeat;
+  background-size: contain;
+  height: 2em;
+  width: 2em;
+  margin-top: 0.5em;
+  margin-left: 0.5em;
+  cursor: pointer;
+  transition: filter 0.25s ease-in-out;
+  &Rotate {
+    animation: navButtonRotate 0.5s ease both;
+  }
+}
+.navBar {
+  z-index: 500;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: #000;
+  color: white;
+}
+
+.navBarAnimateOpen {
+  animation: reveal 0.5s 1 ease-in-out forwards;
+}
+.navBarAnimateClose {
+  animation: conceal 0.5s 1 ease-in-out forwards;
+}
+
+.navBar.close {
+  width: 0;
+  height: 0;
+}
+.navBar.open {
+  width: 100%;
+  height: 100%;
+}
+
+.navBar.close *,
+.navBarAnimateOpen * {
+  display: none;
+}
+
+.navBar ul {
+  list-style-type: none;
+}
+
+.navBar ul li {
+  user-select: none;
+  color: white;
+  font-size: 2em;
+  margin-top: 2em;
+  margin-bottom: 2em;
+}
+
+@keyframes navButtonRotate {
+  100% {
+    transform: rotateZ(360deg);
+  }
+}
+
+@keyframes reveal {
+  from {
+    width: 0;
+    height: 100%;
+  }
+  to {
+    width: 100%;
+    height: 100%;
+  }
+}
+@keyframes conceal {
+  from {
+    width: 100%;
+  }
+  to {
+    width: 0;
+  }
+}

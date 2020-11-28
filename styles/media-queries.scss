@@ -1,0 +1,13 @@
+$breakpoint-tablet: 768px;
+
+@mixin tablet {
+  @media screen and (max-width: $breakpoint-tablet) {
+    @content;
+  }
+}
+
+@mixin moblie {
+  @media screen and (max-width: 576px) {
+    @content;
+  }
+}

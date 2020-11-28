@@ -1,0 +1,94 @@
+@import "media-queries";
+@import "constants";
+.container {
+  user-select: none;
+  background-color: #000000;
+  background-image: linear-gradient(147deg, #000000 0%, #434343 74%);
+  background-repeat: no-repeat;
+  background-position: center;
+  min-height: 100vh;
+  padding: 0 0.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  color: white;
+}
+
+.heroTitle {
+  font-weight: bolder;
+  letter-spacing: -3px;
+  text-align: center;
+  font-size: calc(2vw + 4.5em);
+  margin: 0;
+}
+.heroSubtitle {
+  text-align: center;
+  font-size: 1.5em;
+}
+
+@mixin blobPosition($top, $right, $bottom, $left) {
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+}
+
+.blob {
+  width: 150px;
+  position: absolute;
+  animation: blobRotate 20s infinite ease;
+  &top {
+    @include blobPosition(10px, 50px, null, null);
+  }
+  &down {
+    @include blobPosition(null, null, 40px, 40px);
+  }
+}
+
+@keyframes blobRotate {
+  to {
+    transform: rotateZ(360deg);
+  }
+}
+
+.profile {
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+@include moblie {
+  .profile {
+    width: 150px;
+    height: auto;
+  }
+}
+@include tablet {
+  .blob {
+    width: 100px;
+    &top {
+      @include blobPosition(10px, 25px, null, null);
+    }
+    &down {
+      @include blobPosition(null, null, 20px, 10px);
+    }
+  }
+}
+
+.profileMenu {
+  box-shadow: 0px 0px 60px 0px $topBlobColor;
+  border-radius: 50%;
+  animation: sineBoxShadow 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
+}
+
+@keyframes sineBoxShadow {
+  0% {
+    box-shadow: 0px 0px 60px 0px $topBlobColor;
+  }
+  50% {
+    box-shadow: 0px 0px 30px 0px $topBlobColor;
+  }
+  100% {
+    box-shadow: 0px 0px 60px 0px $topBlobColor;
+  }
+}
