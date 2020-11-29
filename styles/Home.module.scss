@@ -62,21 +62,21 @@
     width: 150px;
     height: auto;
   }
+  .profileMenu {
+    width: 150px !important;
+    height: 150px !important;
+  }
 }
 @include tablet {
   .blob {
-    width: 100px;
-    &top {
-      @include blobPosition(10px, 25px, null, null);
-    }
-    &down {
-      @include blobPosition(null, null, 20px, 10px);
-    }
+    display: none;
   }
 }
 
 .profileMenu {
   box-shadow: 0px 0px 60px 0px $topBlobColor;
+  width: 250px;
+  height: 250px;
   border-radius: 50%;
   animation: sineBoxShadow 5s infinite cubic-bezier(0.45, 0.05, 0.55, 0.95);
 }

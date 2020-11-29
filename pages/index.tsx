@@ -4,7 +4,6 @@ import socialMediaElClasses from "../components/SocialMedia.module.scss";
 import Navbar from "../components/Navbar";
 import SocialMedia from "../components/SocialMedia";
 import { useRef } from "react";
-import NoSSR from "react-no-ssr";
 
 export default function Home() {
   const socialMediaPopover = useRef<HTMLDivElement>(null);
@@ -14,10 +13,6 @@ export default function Home() {
     socialMediaPopover.current?.toggleAttribute("hidden");
     socialMediaEl.classList.toggle(socialMediaElClasses.fadein);
   };
-  const isMobile =
-    typeof window !== "undefined"
-      ? window.matchMedia("(max-width : 576px)").matches
-      : true;
   return (
     <>
       <Head>
@@ -60,18 +55,7 @@ export default function Home() {
           }}
         >
           <span style={{ color: "#fff" }}>(</span>
-          Click my photo or the{" "}
-          <NoSSR>
-            {isMobile ? (
-              <>
-                <br />
-                <span>{"     "}</span>
-              </>
-            ) : (
-              ""
-            )}
-          </NoSSR>{" "}
-          three lines to see more
+          Click my photo or the three lines to see more
           <span style={{ color: "#fff" }}>)</span>
         </h4>
       </div>
