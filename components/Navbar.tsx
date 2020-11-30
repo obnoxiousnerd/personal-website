@@ -43,7 +43,7 @@ const Navbar = () => {
             <a href="/blog">Blog</a>
           </li>
           <li>
-            <a href="/projects">Projects</a>
+            <a href="https://gh.obnerd.in/">Projects</a>
           </li>
         </ul>
       </nav>

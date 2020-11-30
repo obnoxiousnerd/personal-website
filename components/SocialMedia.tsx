@@ -20,6 +20,8 @@ export default function SocialMedia() {
       <h1 style={{ color: "white", textAlign: "center", paddingTop: "1em" }}>
         Find me on
       </h1>
+      <br />
+      <br />
       <div className={classes.badges}>
         <SocialMediaBadge
           link="https://github.com/obnoxiousnerd"

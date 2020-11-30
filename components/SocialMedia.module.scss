@@ -55,6 +55,7 @@
 @include moblie {
   .badges {
     flex-direction: column;
+    bottom: -2em;
   }
   .badgeIcon,
   .badgeLabel {
