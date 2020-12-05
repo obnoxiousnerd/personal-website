@@ -1,4 +1,5 @@
 import { CSSProperties, useRef } from "react";
+import Image from "next/image";
 import classes from "./SocialMedia.module.scss";
 export default function SocialMedia() {
   const parentRef = useRef<HTMLDivElement>(null);
@@ -59,9 +60,12 @@ function SocialMediaBadge(props: SocialMediaProps) {
     <>
       <div className={classes.badge}>
         <a href={props.link}>
-          <img
+          <Image
+            width={150}
+            height={150}
             className={classes.badgeIcon}
             src={props.img}
+            // @ts-ignore
             style={props.imgstyle}
             alt={`${props.medianame} logo`}
           />

@@ -1,4 +1,5 @@
 import Head from "next/head";
+import Image from "next/image";
 import classes from "../styles/Home.module.scss";
 import socialMediaElClasses from "../components/SocialMedia.module.scss";
 import Navbar from "../components/Navbar";
@@ -16,11 +17,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link
-          rel="shortcut icon"
-          href="https://gravatar.com/avatar/4ca9f684dfc0f3cb3c8866d0b45bcc4b?s=16&d=robohash&r=x"
-          type="image/x-icon"
-        />
+        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <title>Pranav Karawale</title>
       </Head>
       <Navbar />
@@ -33,12 +30,17 @@ export default function Home() {
         className={`${classes.blob} ${classes.blobtop}`}
       />
       <div className={classes.container}>
-        <div className={classes.profileMenu}>
-          <img
-            onClick={toggleSocMedPop}
+        {/* a11y */}
+        <button hidden onClick={toggleSocMedPop}>
+          Click to view my social media links
+        </button>
+        <div className={classes.profileMenu} onClick={toggleSocMedPop}>
+          <Image
+            width={250}
+            height={250}
             className={classes.profile}
-            src="https://gravatar.com/avatar/4ca9f684dfc0f3cb3c8866d0b45bcc4b?s=250&d=robohash&r=x"
-            alt="Profile"
+            src="/img/me.jpeg"
+            alt="My Picture"
           />
         </div>
         <p>I AM</p>
