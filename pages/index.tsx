@@ -19,6 +19,11 @@ export default function Home() {
       <Head>
         <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <title>Pranav Karawale</title>
+        <meta
+          name="description"
+          content="I am Pranav Karawale, a student and a passionate web developer. I am also known as obnoxiousnerd on various developer communites like GitHub and dev.to."
+        />
+        <link rel="canonical" href="https://obnerd.in/" />
       </Head>
       <Navbar />
       <div hidden={true} ref={socialMediaPopover}>
