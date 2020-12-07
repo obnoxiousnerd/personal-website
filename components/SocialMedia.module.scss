@@ -44,6 +44,7 @@
 }
 
 .badges {
+  user-select: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -53,6 +54,9 @@
 }
 
 @include moblie {
+  .socialMediaParent {
+    overflow-y: scroll;
+  }
   .badges {
     flex-direction: column;
     bottom: -2em;
@@ -79,6 +83,9 @@
   cursor: pointer;
   width: 150px;
   height: auto;
+  * img {
+    border-radius: 5%;
+  }
 }
 .badgeLabel {
   color: white;

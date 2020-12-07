@@ -28,15 +28,11 @@ export default function SocialMedia() {
           link="https://github.com/obnoxiousnerd"
           medianame="Github"
           img="https://avatars0.githubusercontent.com/u/9919?s=280&v=4"
-          imgstyle={{
-            borderRadius: "5%",
-          }}
         />
         <SocialMediaBadge
           link="https://npmjs.com/~obnoxiousnerd"
           medianame="NPM"
           img="https://img.stackshare.io/service/1120/lejvzrnlpb308aftn31u.png"
-          imgstyle={{ borderRadius: "5%" }}
         />
         <SocialMediaBadge
           link="https://dev.to/obnoxiousnerd"
@@ -58,17 +54,16 @@ interface SocialMediaProps {
 function SocialMediaBadge(props: SocialMediaProps) {
   return (
     <>
-      <div className={classes.badge}>
+      <div style={props.imgstyle} className={classes.badge}>
         <a href={props.link}>
-          <Image
-            width={150}
-            height={150}
-            className={classes.badgeIcon}
-            src={props.img}
-            // @ts-ignore
-            style={props.imgstyle}
-            alt={`${props.medianame} logo`}
-          />
+          <div className={classes.badgeIcon} style={props.imgstyle}>
+            <Image
+              width={150}
+              height={150}
+              src={props.img}
+              alt={`My profile on ${props.medianame}`}
+            />
+          </div>
           <h2 className={classes.badgeLabel}>{props.medianame}</h2>
         </a>
       </div>
