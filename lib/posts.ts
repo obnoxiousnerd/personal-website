@@ -13,7 +13,9 @@ export interface postMetadata {
 }
 
 export const getAllSlugs = () => {
-  const fileNames = fs.readdirSync(postDirectory);
+  const fileNames = fs
+    .readdirSync(postDirectory)
+    .filter((x) => x.endsWith(".mdx"));
   return fileNames.map((filename) => {
     return {
       params: {
