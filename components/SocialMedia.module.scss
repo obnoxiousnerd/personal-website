@@ -49,17 +49,18 @@
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  display: flex;
-  flex-direction: row;
+  display: grid;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+  align-items: center;
+  justify-content: center;
 }
 
 @include moblie {
-  .socialMediaParent {
-    overflow-y: scroll;
-  }
   .badges {
-    flex-direction: column;
-    bottom: -2em;
+    padding-top: 40%;
+    grid-template-columns: repeat(2, 1fr);
   }
   .badgeIcon,
   .badgeLabel {
@@ -77,11 +78,12 @@
 .badge {
   margin-left: 1em;
   margin-right: 1em;
+  padding: 0.75rem;
 }
 
 .badgeIcon {
   cursor: pointer;
-  width: 150px;
+  width: 120px;
   height: auto;
   * img {
     border-radius: 5%;
@@ -89,6 +91,6 @@
 }
 .badgeLabel {
   color: white;
-  width: 150px;
+  width: 120px;
   text-align: center;
 }

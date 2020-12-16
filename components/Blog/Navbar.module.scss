@@ -1,0 +1,47 @@
+@import "../../styles/media-queries.scss";
+.navRoot {
+  user-select: none;
+  color: white;
+  background: #202020;
+  position: fixed;
+  inset: 0;
+  z-index: 999;
+  height: 63px;
+  border-bottom: 1px solid black;
+  width: 100%;
+  margin: 0;
+  top: 0;
+  transition: all 250ms ease;
+  ul {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    @include tablet() {
+      li {
+        text-decoration: underline;
+        margin: 0 1em !important;
+        font-size: 1.2em !important;
+      }
+    }
+    li {
+      margin: 0 3em;
+      height: 100%;
+      display: flex;
+      align-items: center;
+      font-size: 1.5em;
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+}
+
+.navRootScrolled {
+  background: transparentize($color: #fff, $amount: 0.8);
+  backdrop-filter: blur(8px);
+  color: black;
+}

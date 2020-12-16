@@ -1,0 +1,18 @@
+.indexListLink {
+  color: initial !important;
+  text-decoration: underline;
+}
+
+.postItem {
+  cursor: pointer;
+  width: 95%;
+  height: 100px;
+  margin: 1em 2%;
+  padding: 0 0.5%;
+  border-radius: 10px;
+  border: 1px solid black;
+  transition: transform 0.5s cubic-bezier(0.19, 1, 0.22, 1);
+  &:hover {
+    transform: scale(1.01);
+  }
+}

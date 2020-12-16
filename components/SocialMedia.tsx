@@ -39,6 +39,16 @@ export default function SocialMedia() {
           medianame="dev.to"
           img="https://d2fltix0v2e0sb.cloudfront.net/dev-rainbow.png"
         />
+        <SocialMediaBadge
+          link="https://patreon.com/obnoxiousnerd"
+          medianame="Patreon"
+          img="/img/patreon.png"
+        />
+        <SocialMediaBadge
+          link="https://linkedin.com/in/pranav-karawale"
+          medianame="LinkedIn"
+          img="https://img.stackshare.io/stack/20/default_0f2e330b189b8690f25d4a51e09a4027d4041f09.png"
+        />
       </div>
     </div>
   );

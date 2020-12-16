@@ -17,13 +17,24 @@ export default function Home() {
   return (
     <>
       <Head>
-        <link rel="shortcut icon" href="favicon.ico" type="image/x-icon" />
         <title>Pranav Karawale</title>
         <meta
           name="description"
           content="I am Pranav Karawale, a student and a passionate web developer. I am also known as obnoxiousnerd on various developer communites like GitHub and dev.to."
         />
         <link rel="canonical" href="https://obnerd.in/" />
+
+        {/* og-tags start */}
+        <meta property="og:title" content="" />
+        <meta property="og:site_name" content="Pranav Karawale's Website" />
+        <meta property="og:url" content="https://obnerd.in" />
+        <meta
+          property="og:description"
+          content="I am Pranav Karawale, a student and a passionate web developer. I am also known as obnoxiousnerd on various developer communites like GitHub and dev.to."
+        />
+        <meta property="og:type" content="website" />
+        <meta property="og:image" content="https://obnerd.in/img/me.jpeg" />
+        {/* og-tags end */}
       </Head>
       <Navbar />
       <div hidden={true} ref={socialMediaPopover}>

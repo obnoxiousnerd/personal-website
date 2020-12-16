@@ -1,3 +1,4 @@
+import Link from "next/link";
 import { MouseEvent, useRef } from "react";
 import styles from "./Navbar.module.scss";
 const Navbar = () => {
@@ -37,13 +38,19 @@ const Navbar = () => {
       <nav ref={navBarRef} className={`${styles.navBar} ${styles.close}`}>
         <ul>
           <li>
-            <a href="/me">About Me</a>
+            <Link href="/me">
+              <a>About Me</a>
+            </Link>
           </li>
           <li>
-            <a href="/blog">Blog</a>
+            <Link href="/blog">
+              <a>Blog</a>
+            </Link>
           </li>
           <li>
-            <a href="https://gh.obnerd.in/">Projects</a>
+            <Link href="https://gh.obnerd.in/">
+              <a>Projects</a>
+            </Link>
           </li>
         </ul>
       </nav>
