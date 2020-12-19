@@ -4,9 +4,11 @@
 }
 
 .postItem {
+  display: grid;
   cursor: pointer;
   width: 95%;
-  height: 100px;
+  min-height: 100px;
+  grid-template-rows: 1fr;
   margin: 1em 2%;
   padding: 0 0.5%;
   border-radius: 10px;

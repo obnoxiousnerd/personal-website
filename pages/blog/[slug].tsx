@@ -6,6 +6,7 @@ import Head from "next/head";
 import Navbar from "../../components/Blog/Navbar";
 import Article from "../../components/Blog/Article";
 import NextImg from "next/image";
+import Codeblock from "../../components/Blog/Codeblock";
 
 type staticPathsOutput = {
   params: {
@@ -26,7 +27,7 @@ const Image = (props: any) => (
     height={props.height || props.width}
   />
 );
-export const components = { Image };
+export const components = { Image, Codeblock };
 
 export default function Blog({ rendered, meta, slug }: Props) {
   return (

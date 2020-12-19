@@ -9,6 +9,7 @@ module.exports = {
       "avatars0.githubusercontent.com",
       "img.stackshare.io",
       "d2fltix0v2e0sb.cloudfront.net",
+      "i.imgur.com",
     ],
   },
 };

@@ -17,11 +17,12 @@ export default function Article({
   content,
   date,
 }: Props) {
+  const readableDate = new Date(date).toDateString();
   return (
     <>
       <article className={classes.mainArticle}>
         {coverImage && coverImage !== "" && (
-          <img src={coverImage} alt="Cover Image" />
+          <img width="100%" height="auto" src={coverImage} alt="Cover Image" />
         )}
         <h1>
           <style jsx>{`
@@ -33,7 +34,7 @@ export default function Article({
           <style jsx>{`
             color: #555;
           `}</style>
-          {date}, By {author}
+          {readableDate}, By {author}
         </p>
         {hydrate(content, { components })}
       </article>

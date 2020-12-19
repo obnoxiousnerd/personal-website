@@ -36,6 +36,7 @@ export default function Blog({ posts }: Props) {
 }
 
 const BlogPostItem = ({ post }: { post: postMetadata }) => {
+  const readableDate = new Date(post.date).toDateString();
   return (
     <>
       <div key={post.slug} className={classes.postItem}>
@@ -45,7 +46,7 @@ const BlogPostItem = ({ post }: { post: postMetadata }) => {
           </a>
         </Link>
         <p>
-          {post.date}, by {post.author}
+          {readableDate}, by {post.author}
         </p>
       </div>
     </>
