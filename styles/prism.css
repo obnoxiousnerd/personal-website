@@ -20,7 +20,9 @@ pre {
   -ms-hyphens: none;
   hyphens: none;
 }
-
+code {
+  line-break: anywhere;
+}
 pre {
   padding: 2em;
   margin: 0.5em 0;

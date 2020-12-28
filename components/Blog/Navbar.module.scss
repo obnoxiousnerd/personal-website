@@ -3,6 +3,7 @@
   user-select: none;
   color: white;
   background: #202020;
+  backdrop-filter: blur(8px);
   position: fixed;
   inset: 0;
   z-index: 999;
@@ -41,7 +42,6 @@
 }
 
 .navRootScrolled {
-  background: transparentize($color: #fff, $amount: 0.8);
-  backdrop-filter: blur(8px);
+  background: transparentize($color: #fff, $amount: 0.3);
   color: black;
 }
