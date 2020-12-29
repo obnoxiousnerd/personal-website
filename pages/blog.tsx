@@ -41,7 +41,7 @@ const BlogPostItem = ({ post }: { post: postMetadata }) => {
     <>
       <div key={post.slug} className={classes.postItem}>
         <Link href={`/blog/${post.slug}`}>
-          <a className={classes.indexListLink}>
+          <a className={classes.indexListLink} href={`/blog/${post.slug}`}>
             <h2>{post.title}</h2>
           </a>
         </Link>
