@@ -39,17 +39,17 @@ const Navbar = () => {
         <ul>
           <li>
             <Link href="/me">
-              <a>About Me</a>
+              <a href="/me">About Me</a>
             </Link>
           </li>
           <li>
             <Link href="/blog">
-              <a>Blog</a>
+              <a href="/blog">Blog</a>
             </Link>
           </li>
           <li>
             <Link href="https://gh.obnerd.in/">
-              <a>Projects</a>
+              <a href="https://gh.obnerd.in/">Projects</a>
             </Link>
           </li>
         </ul>
