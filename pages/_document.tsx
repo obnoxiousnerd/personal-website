@@ -19,15 +19,17 @@ class MyDocument extends Document {
           <meta name="theme-color" content="#202020" />
           <link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" />
           {/* Global site tag (gtag.js) - Google Analytics */}
-          <script async src="https://www.googletagmanager.com/gtag/js?id=UA-175190267-1"></script>
+          <script
+            async
+            src="https://www.googletagmanager.com/gtag/js?id=UA-175190267-1"
+          ></script>
           <script>
-            window.dataLayer = window.dataLayer || [];
+            {`window.dataLayer = window.dataLayer || [];
             function gtag(){dataLayer.push(arguments);}
             gtag('js', new Date());
 
-            gtag('config', 'UA-175190267-1');
+            gtag('config', 'UA-175190267-1');`}
           </script>
-
         </Head>
         <body>
           <Main />
